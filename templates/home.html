@@ -128,104 +128,24 @@
 </section>
 <!-- =============== SECTION DEAL // END =============== -->
 
-<!-- =============== CATEGORY  =============== -->
+
+
+
+
+<!-- =============== BRAND VIDEO  =============== -->
+
 <section class="padding-bottom">
-  {% for category in links %}
-      <header class="section-heading heading-line pt-5">
-        <h4 class="title-section text-uppercase">{{ category.category_name }}</h4>
-      </header>
-
-      <div class="card card-home-category">
-        <div class="row no-gutters">
-          <div class="col-md-3">
-            <div class="home-category-banner bg-light-orange">
-              <p>{{ category.description | lower | capfirst }} </p>
-              <a href="#" class="btn btn-outline-primary rounded-pill">Shop now</a>
-            </div>
-          </div> <!-- col.// -->
-        <div class="col-md-9">
-            <ul class="row no-gutters bordered-cols">
-              <li class="col-6 col-lg-3 col-md-4">
-                    <a href="#" class="item">
-                        <div class="card-body">
-                            <h6 class="title">Well made women clothes with trending collection  </h6>
-                            <img class="img-sm float-right" src="{% static 'images/items/1.jpg' %}">
-                        </div>
-                    </a>
-              </li>
-            </ul>
-          </div> <!-- col.// -->
-        </div> <!-- row.// -->
-      </div> <!-- card.// -->
-  {% endfor %}
-</section>
-<!-- =============== CATEGORY  END =============== -->
-
-
-
-
-
-<!-- =============== SECTION REQUEST =============== -->
-
-{% comment %} <section class="padding-bottom">
-
+  <div class="container rounded">
     <header class="section-heading heading-line">
-        <h4 class="title-section text-uppercase">Request for Quotation</h4>
-    </header>
+	<h4 class="title-section text-uppercase">HOW WE MAKE OUR CHEF CRAFTED SNACKS</h4>
+</header>
+    <div class="embed-responsive embed-responsive-16by9" style="cursor: pointer;">
 
-    <div class="row">
-        <div class="col-md-8">
-    <div class="card-banner banner-quote overlay-gradient" style="background-image: url('images/banners/banner9.jpg');">
-    <div class="card-img-overlay white">
-        <h3 class="card-title">An easy way to send request to suppliers</h3>
-        <p class="card-text" style="max-width: 400px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt.</p>
-        <a href="" class="btn btn-primary rounded-pill">Learn more</a>
+      <iframe loading="lazy" class="embed-responsive-item" src="{% static 'images\Brand_Video.mp4'%}"></iframe>
     </div>
-    </div>
-        </div> <!-- col // -->
-        <div class="col-md-4">
-
-    <div class="card card-body">
-        <h4 class="title py-3">One Request, Multiple Quotes</h4>
-        <form>
-            <div class="form-group">
-                <input class="form-control" name="" placeholder="What are you looking for?" type="text">
-            </div>
-            <div class="form-group">
-                <div class="input-group">
-                    <input class="form-control" placeholder="Quantity" name="" type="text">
-
-                    <select class="custom-select form-control">
-                        <option>Pieces</option>
-                        <option>Litres</option>
-                        <option>Tons</option>
-                        <option>Gramms</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group text-muted">
-                <p>Select template type:</p>
-                <label class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="option1">
-                <span class="form-check-label">Request price</span>
-                </label>
-                <label class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="option2">
-                <dspaniv class="form-check-label">Request a sample</span>
-                </label>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-warning">Request for quote</button>
-            </div>
-        </form>
-    </div>
-
-        </div> <!-- col // -->
-    </div> <!-- row // -->
-</section> {% endcomment %}
-
-<!-- =============== SECTION REQUEST .//END =============== -->
+  </div>
+</section>
+<!-- =============== BRAND VIDEO END  =============== -->
 
 
 <!-- =============== SECTION ITEMS =============== -->
@@ -252,75 +172,6 @@
 <!-- =============== SECTION ITEMS .//END =============== -->
 
 
-<!-- =============== SECTION SERVICES =============== -->
-{% comment %} <section  class="padding-bottom">
-
-    <header class="section-heading heading-line">
-        <h4 class="title-section text-uppercase">Trade services</h4>
-    </header>
-
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <article class="card card-post">
-            <img src="images/posts/1.jpg" class="card-img-top">
-            <div class="card-body">
-                <h6 class="title">Trade Assurance</h6>
-                <p class="small text-uppercase text-muted">Order protection</p>
-            </div>
-            </article> <!-- card.// -->
-        </div> <!-- col.// -->
-        <div class="col-md-3 col-sm-6">
-            <article class="card card-post">
-            <img src="images/posts/2.jpg" class="card-img-top">
-            <div class="card-body">
-                <h6 class="title">Pay anytime</h6>
-                <p class="small text-uppercase text-muted">Finance solution</p>
-            </div>
-            </article> <!-- card.// -->
-        </div> <!-- col.// -->
-        <div class="col-md-3 col-sm-6">
-            <article class="card card-post">
-            <img src="images/posts/3.jpg" class="card-img-top">
-            <div class="card-body">
-                <h6 class="title">Inspection solution</h6>
-                <p class="small text-uppercase text-muted">Easy Inspection</p>
-            </div>
-            </article> <!-- card.// -->
-        </div> <!-- col.// -->
-        <div class="col-md-3 col-sm-6">
-            <article class="card card-post">
-            <img src="images/posts/4.jpg" class="card-img-top">
-            <div class="card-body">
-                <h6 class="title">Ocean and Air Shipping</h6>
-                <p class="small text-uppercase text-muted">Logistic services</p>
-            </div>
-            </article> <!-- card.// -->
-        </div> <!-- col.// -->
-    </div> <!-- row.// -->
-
-</section> {% endcomment %}
-<!-- =============== SECTION SERVICES .//END =============== -->
-
-<!-- =============== SECTION REGION =============== -->
-{% comment %} <section  class="padding-bottom">
-
-    <header class="section-heading heading-line">
-        <h4 class="title-section text-uppercase">Choose region</h4>
-    </header>
-
-    <ul class="row mt-4">
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/CN.png"> <span>China</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/DE.png"> <span>Germany</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/AU.png"> <span>Australia</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/RU.png"> <span>Russia</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/IN.png"> <span>India</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/GB.png"> <span>England</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/TR.png"> <span>Turkey</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <img class="icon-flag-sm" src="images/icons/flags/UZ.png"> <span>Uzbekistan</span> </a></li>
-        <li class="col-md col-6"><a href="#" class="icontext"> <i class="mr-3 fa fa-ellipsis-h"></i> <span>More regions</span> </a></li>
-    </ul>
-</section> {% endcomment %}
-    <!-- =============== SECTION REGION .//END =============== -->
 
     <article class="my-4">
         <img src="{% static 'images/banners/ad-sm.png'%}" class="w-100">

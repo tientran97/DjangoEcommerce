@@ -71,30 +71,27 @@
                 </dl>
 
                 <div class="form-row  mt-4">
-                    <div class="form-group col-md flex-grow-0">
-                        <div class="input-group mb-3 input-spinner">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-light" type="button" id="button-plus"> + </button>
-                        </div>
-                        <input type="text" class="form-control" value="1">
-                        <div class="input-group-append">
-                            <button class="btn btn-light" type="button" id="button-minus"> &minus; </button>
-                        </div>
-                        </div>
-                    </div> <!-- col.// -->
+
                     <div class="form-group col-md">
                         {% if single_product.stock <= 0 %}
                              <a href="#"  class="btn  btn-danger" disable style="cursor: not-allowed;">
                                 <i class="fas fa-shopping-cart"></i> <span class="text">OUT OF STOCK</span>
                             </a>
                         {% else %}
-                            <a href="{% url 'add_cart' single_product.id %}"  class="btn  btn-primary">
-                                <i class="fas fa-shopping-cart"></i> <span class="text">Add to cart</span>
-                            </a>
+                            {% if product_already_in_cart%}
+                                <a href="{% url 'add_cart' single_product.id %}"  class="btn  btn-success mr-2">
+                                    <i class="fas fa-check"></i> <span class="text">Added To Cart</span>
+                                </a>
+                                <a href="{% url 'cart' %}" class="btn btn-outline-primary">
+                                    <i class="fas fa-eye"></i> <span class="text">View Cart</span>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'add_cart' single_product.id %}"  class="btn  btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> <span class="text">Add To Cart</span>
+                                </a>
+                            {% endif %}
                         {% endif%}
-                        <a href="#" class="btn btn-light">
-                            <i class="fas fa-envelope"></i> <span class="text">Contact supplier</span>
-                        </a>
+
                     </div> <!-- col.// -->
                 </div> <!-- row.// -->
 
@@ -117,40 +114,15 @@
 	<div class="col-md-8">
 		<h5 class="title-description">Description</h5>
 		<p>
-			Lava stone grill, suitable for natural gas, with cast-iron cooking grid, piezo ignition, stainless steel burners, water tank, and thermocouple. Thermostatic adjustable per zone. Comes complete with lava rocks. Adjustable legs. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.
+			{{ single_product.description }}
 		</p>
-		<ul class="list-check">
-		<li>Material: Stainless steel</li>
-		<li>Weight: 82kg</li>
-		<li>built-in drip tray</li>
-		<li>Open base for pots and pans</li>
-		<li>On request available in propane execution</li>
-		</ul>
+		<h5 class="title-description">Nutrition</h5>
 
-		<h5 class="title-description">Specifications</h5>
-		<table class="table table-bordered">
-			<tr> <th colspan="2">Basic specs</th> </tr>
-			<tr> <td>Type of energy</td><td>Lava stone</td> </tr>
-			<tr> <td>Number of zones</td><td>2</td> </tr>
-			<tr> <td>Automatic connection	</td> <td> <i class="fa fa-check text-success"></i> Yes </td></tr>
+        <p>
+			{{ single_product.nutrition }}
+		</p>
 
-			<tr> <th colspan="2">Dimensions</th> </tr>
-			<tr> <td>Width</td><td>500mm</td> </tr>
-			<tr> <td>Depth</td><td>400mm</td> </tr>
-			<tr> <td>Height	</td><td>700mm</td> </tr>
 
-			<tr> <th colspan="2">Materials</th> </tr>
-			<tr> <td>Exterior</td><td>Stainless steel</td> </tr>
-			<tr> <td>Interior</td><td>Iron</td> </tr>
-
-			<tr> <th colspan="2">Connections</th> </tr>
-			<tr> <td>Heating Type</td><td>Gas</td> </tr>
-			<tr> <td>Connected load gas</td><td>15 Kw</td> </tr>
-
-		</table>
 	</div> <!-- col.// -->
 
 	<aside class="col-md-4">
