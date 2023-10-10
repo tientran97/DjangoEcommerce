@@ -74,7 +74,7 @@
 
                     <div class="form-group col-md">
                         {% if single_product.stock <= 0 %}
-                             <a href="#"  class="btn  btn-danger" disable style="cursor: not-allowed;">
+                             <a href="#"  class="btn  btn-outline-dark" disable style="cursor: not-allowed;">
                                 <i class="fas fa-shopping-cart"></i> <span class="text">OUT OF STOCK</span>
                             </a>
                         {% else %}
@@ -112,15 +112,22 @@
 
 <div class="row">
 	<div class="col-md-8">
-		<h5 class="title-description">Description</h5>
-		<p>
-			{{ single_product.description }}
-		</p>
-		<h5 class="title-description">Nutrition</h5>
+        {% if single_product.ingredients != "" %}
+            <h5 class="title-description">Ingredients</h5>
+            <p>
+                {{ single_product.ingredients | lower | capfirst }}
+            </p>
+        {% endif %}
+        {% if single_product.nutrition != "" %}
 
-        <p>
-			{{ single_product.nutrition }}
-		</p>
+            <h5 class="title-description">Nutrition</h5>
+            <p>
+                {{ single_product.nutrition }}
+            </p>
+        {% endif %}
+
+        <h5 class="title-description text-center">What people say about this product</h5>
+        
 
 
 	</div> <!-- col.// -->
@@ -129,46 +136,10 @@
 
 		<div class="box">
 
-		<h5 class="title-description">Files</h5>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-
-    <h5 class="title-description">Videos</h5>
+		<h5 class="title-description">You May Also Like</h5>
 
 
-    <article class="media mb-3">
-      <a href="#"><img class="img-sm mr-3" src="images/posts/3.jpg"></a>
-      <div class="media-body">
-        <h6 class="mt-0"><a href="#">How to use this item</a></h6>
-        <p class="mb-2"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin </p>
-      </div>
-    </article>
-
-    <article class="media mb-3">
-      <a href="#"><img class="img-sm mr-3" src="images/posts/2.jpg"></a>
-      <div class="media-body">
-        <h6 class="mt-0"><a href="#">New tips and tricks</a></h6>
-        <p class="mb-2"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin </p>
-      </div>
-    </article>
-
-    <article class="media mb-3">
-      <a href="#"><img class="img-sm mr-3" src="images/posts/1.jpg"></a>
-      <div class="media-body">
-        <h6 class="mt-0"><a href="#">New tips and tricks</a></h6>
-        <p class="mb-2"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin </p>
-      </div>
-    </article>
-
-
-
-	</div> <!-- box.// -->
+	    </div> <!-- box.// -->
 	</aside> <!-- col.// -->
 </div> <!-- row.// -->
 
