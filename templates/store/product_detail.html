@@ -88,7 +88,7 @@
                                 <i class="fas fa-shopping-cart"></i> <span class="text">OUT OF STOCK</span>
                             </a>
                         {% else %}
-                            <a href="#"  class="btn  btn-primary">
+                            <a href="{% url 'add_cart' single_product.id %}"  class="btn  btn-primary">
                                 <i class="fas fa-shopping-cart"></i> <span class="text">Add to cart</span>
                             </a>
                         {% endif%}
