@@ -47,37 +47,41 @@
         </header><!-- sect-heading -->
 
         <div class="row">
-            {% for product in products %}
-                <div class="col-md-3">
-                    <figure class="card card-product-grid rounded" style="cursor: pointer;">
-                        <a href="{{ product.get_url }}" class="img-wrap">
-                            <span class="badge badge-danger"> NEW </span>
-                            <img src="{{ product.images.url }}">
-                        </a> <!-- img-wrap.// -->
-                        <figcaption class="info-wrap">
-                                <a href="{{ product.get_url }}" class="title mb-2 text-truncate">{{ product.product_name }}</a>
-                                <div class="price-wrap">
-                                    <span class="price">${{ product.price }}</span>
-                                    <small class="text-muted">/per item</small>
-                                </div> <!-- price-wrap.// -->
-                                <p class="text-muted ">Guangzhou Yichuang Electronic Co</p>
+            {% if products %}
+                {% for product in products %}
+                    <div class="col-md-3">
+                        <figure class="card card-product-grid rounded" style="cursor: pointer;">
+                            <a href="{{ product.get_url }}" class="img-wrap">
+                                <span class="badge badge-danger"> NEW </span>
+                                <img src="{{ product.images.url }}">
+                            </a> <!-- img-wrap.// -->
+                            <figcaption class="info-wrap">
+                                    <a href="{{ product.get_url }}" class="title mb-2 text-truncate">{{ product.product_name }}</a>
+                                    <div class="price-wrap">
+                                        <span class="price">${{ product.price }}</span>
+                                        <small class="text-muted">/per item</small>
+                                    </div> <!-- price-wrap.// -->
+                                    <p class="text-muted ">Guangzhou Yichuang Electronic Co</p>
 
-                                <hr>
+                                    <hr>
 
-                                {% comment %} <p class="mb-3">
-                                    <span class="tag"> <i class="fa fa-check"></i> Verified</span>
-                                    <span class="tag"> 2 Years </span>
-                                    <span class="tag"> 23 reviews </span>
-                                    <span class="tag"> Japan </span>
-                                </p> {% endcomment %}
+                                    {% comment %} <p class="mb-3">
+                                        <span class="tag"> <i class="fa fa-check"></i> Verified</span>
+                                        <span class="tag"> 2 Years </span>
+                                        <span class="tag"> 23 reviews </span>
+                                        <span class="tag"> Japan </span>
+                                    </p> {% endcomment %}
 
 
-                                {% comment %} <a href="#" class="btn btn-outline-primary ml-auto"> <i class="fa fa-shopping-cart"></i> Add to cart</a> {% endcomment %}
+                                    {% comment %} <a href="#" class="btn btn-outline-primary ml-auto"> <i class="fa fa-shopping-cart"></i> Add to cart</a> {% endcomment %}
 
-                        </figcaption>
-                    </figure>
-                </div> <!-- col.// -->
-            {% endfor %}
+                            </figcaption>
+                        </figure>
+                    </div> <!-- col.// -->
+                {% endfor %}
+            {% else %}
+                    <h2 class="text-center"> No result found. Please try again</h2>
+            {% endif %}
         </div> <!-- row end.// -->
 
 
@@ -105,9 +109,9 @@
 
 
         <div class="box text-center">
-            <p>Did you find what you were looking for？</p>
-            <a href="" class="btn btn-light">Yes</a>
-            <a href="" class="btn btn-light">No</a>
+            <p>Can't you find what you were looking for？</p>
+
+            <a href="" class="btn btn-outline-primary">Have a quick chat with us</a>
         </div>
 
     </div> <!-- container .//  -->

@@ -10,17 +10,18 @@
                         </a> <!-- brand-wrap.// -->
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-6">
-                        <form action="#" class="search-header">
+                        <form action="{% url 'search' %}" method="GET" class="search-header">
 
                             <div class="input-group w-100">
-								    <a href="{% url 'store'%}" class="border-right text-center py-2 px-3 " style="cursor: pointer;">Shop now</a>
-                                <input type="text" class="form-control" placeholder="Search">
+								<a href="{% url 'store'%}" class="border-right text-center py-2 px-3 " style="cursor: pointer;">Shop now</a>
+                                <input name="keyword" type="text" class="form-control" placeholder="Search">
                                 <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fa fa-search"></i> Search
                                 </button>
                                 </div>
                             </div>
+
                         </form> <!-- search-wrap .end// -->
                     </div> <!-- col.// -->
                     <div class="col-xl-4 col-lg-4 col-md-6">
