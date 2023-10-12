@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   // var html_download = '<a href="http://bootstrap-ecommerce.com/templates.html" class="btn btn-dark rounded-pill" style="font-size:13px; z-index:100; position: fixed; bottom:10px; right:10px;">Download theme</a>';
   //  $('body').prepend(html_download);
-    
+
 
 	//////////////////////// Prevent closing from click inside dropdown
     $(document).on('click', '.dropdown-menu', function (e) {
@@ -26,7 +26,7 @@ $(document).ready(function() {
      		e.preventDefault();
      		$(this).next().slideToggle('fast');
      	});
- 
+
     } // end if
 
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
             item.removeClass('active');
             // item.find('.radio').find('span').text('Unselect');
         }
-   
+
     });
 
 	//////////////////////// Bootstrap tooltip
@@ -59,7 +59,7 @@ $(document).ready(function() {
         $(offcanvas_id).toggleClass("show");
         $('body').toggleClass("offcanvas-active");
         $(".screen-overlay").toggleClass("show");
-    }); 
+    });
 
    	// Close menu when pressing ESC
     $(document).on('keydown', function(event) {
@@ -73,8 +73,8 @@ $(document).ready(function() {
     	$(".screen-overlay").removeClass("show");
         $(".mobile-offcanvas").removeClass("show");
         $("body").removeClass("offcanvas-active");
-    }); 
-    
-}); 
+    });
+
+});
 // jquery end
 

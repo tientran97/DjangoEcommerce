@@ -54,6 +54,7 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
 
+  
 body {
   margin: 0;
   font-family: "Inter", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -62,7 +63,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: right;
-  background-color: #fff; } 
+  background-color: #fff; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
