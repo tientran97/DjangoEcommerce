@@ -39,7 +39,7 @@
                                                 <div class="aside"><img src="{{ cart_item.product.images.url }}" class="img-sm"></div>
                                                 <figcaption class="info">
                                                     <a href="#" class="title text-dark">{{ cart_item.product.product_name | lower | capfirst }}</a>
-                                                    <p class="text-muted small">Size: XL, Color: blue, <br> Brand: Gucci</p>
+                                                    
                                                 </figcaption>
                                             </figure>
                                         </td>
@@ -72,7 +72,7 @@
                         </table>
 
                         <div class="card-body border-top">
-                            <a href="#" class="btn btn-primary float-md-right"> Make Purchase <i class="fa fa-chevron-right"></i> </a>
+                            <a href="{% url "checkout" %}" class="btn btn-primary float-md-right"> Make Purchase <i class="fa fa-chevron-right"></i> </a>
                             <a href="{% url 'store' %}" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Continue shopping </a>
                         </div>
                     </div> <!-- card.// -->
@@ -83,21 +83,7 @@
 
             </main> <!-- col.// -->
             <aside class="col-md-3">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <label>Have coupon?</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" name="" placeholder="Coupon code">
-                                        <span class="input-group-append">
-                                            <button class="btn btn-primary">Apply</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div> <!-- card-body.// -->
-                    </div>  <!-- card .// -->
+
                     <div class="card">
                         <div class="card-body">
                             <dl class="dlist-align">
@@ -116,7 +102,6 @@
                             <p class="text-center mb-3">
                                 <img src="{% static "images/misc/payments.png" %}" height="26">
                             </p>
-
                         </div> <!-- card-body.// -->
                     </div>  <!-- card .// -->
                 </aside> <!-- col.// -->
